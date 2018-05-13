@@ -1,0 +1,32 @@
+.centre{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.change1{
+    width: 60%;
+    height: auto;
+}
+
+.change2{
+    width: 40%;
+    height: auto;
+}
+
+.change3{
+    width: 80%;
+    height: auto;
+}
+
+.change4{
+    width: 50%;
+    height: auto;
+}
+
