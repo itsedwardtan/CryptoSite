@@ -120,7 +120,7 @@ function predict3Crypto(cryptolist){
     }
 }
 
-function loadcryptoStuff(){
+function loadcryptoStuff(resolve, error){
     $.ajax({
         url:'https://api.coinmarketcap.com/v1/ticker/?limit=100',
         type: "GET",
@@ -135,10 +135,22 @@ function loadcryptoStuff(){
 
             }
 
+            resolve()
+
         }
     })
 
 }
+
+new Promise(function(resolve, reject){
+    loadcryptoStuff(resolve, reject)
+}).then(() => {
+    loadPicture()
+}).then(() => {
+    predict3Crypto()
+})
+
+
 
 
 function getCurrentBtcPrice(){
